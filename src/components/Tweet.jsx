@@ -4,19 +4,19 @@ import Timestamp from "./Timestamp";
 import Message from "./Message";
 import Actions from "./Actions";
 
-function Tweet(props) {
-  /* console.log(props); */
+function Tweet({tweet: {timestamp, message, user: {name, image, handle}}}) {
+  /* console.log({tweet: {timestamp}}); */
   return (
     <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
+      <ProfileImage image={image} />
 
       <div className="body">
         <div className="top">
-          <User name={props.tweet.user.name} handle={props.tweet.user.handle}/>
-          <Timestamp timestamp={props.tweet.timestamp} />
+          <User name={name} handle={handle}/>
+          <Timestamp timestamp={timestamp} />
         </div>
 
-        <Message message={props.tweet.message} />
+        <Message message={message} />
 
         <Actions />
       </div>

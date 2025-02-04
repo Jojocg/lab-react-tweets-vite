@@ -1,8 +1,8 @@
-export default function ProfileImage(props) {
-    /* console.log(props); */
+export default function ProfileImage({image}) {
+    /* console.log({image}); */
     return (
         <>
-            <img src={props.image} className="profile" alt="profile" />
+            <img src={image} className="profile" alt="profile" />
         </>
     );
 }

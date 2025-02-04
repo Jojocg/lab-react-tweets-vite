@@ -1,8 +1,8 @@
-export default function Message(props) {
+export default function Message({message}) {
     return (
         <>
             <p className="message">
-                {props.message}
+                {message}
             </p>
         </>
     );

@@ -1,7 +1,7 @@
-export default function Timestamp(props) {
+export default function Timestamp({timestamp}) {
     return (
         <>
-            <span className="timestamp">{props.timestamp}</span>
+            <span className="timestamp">{timestamp}</span>
         </>
     );
 }
